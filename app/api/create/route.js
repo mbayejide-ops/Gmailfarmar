@@ -6,7 +6,7 @@ export async function POST(request) {
     const data = await request.json();
 
     // Basic validation
-    if (!data.firstName || !data.lastName || !data.username || !data.password || !data.phone) {
+    if (!data.firstName || !data.lastName || !data.username || !data.password) {
       return new Response(JSON.stringify({ error: "Missing required fields" }), { status: 400 });
     }
 
